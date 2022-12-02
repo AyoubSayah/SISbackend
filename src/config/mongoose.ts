@@ -1,6 +1,6 @@
 export {};
 const mongoose = require('mongoose');
-const { mongo } = require('./vars');
+
 
 
 mongoose.Promise = Promise;
