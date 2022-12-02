@@ -13,4 +13,4 @@ RUN npm install
 # Expose port
 EXPOSE 3010
 # Start nginx
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "dev"]
