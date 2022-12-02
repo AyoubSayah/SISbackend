@@ -20,7 +20,7 @@ const postsSchema = new Schema({
     isPublished : {
         type : String,
         required : false,
-        default : false
+        default : true
     }
 },
 {
