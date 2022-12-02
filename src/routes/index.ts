@@ -6,7 +6,9 @@ import express from 'express';
 const postRouter = require('./posts.route')
 const commentRouter = require('./comment.route')
 const reactionRouter = require('./reaction.route')
-
+const quiz=require("./quiz.route")
+const question=require("./question.route")
+const response=require("./response.route")
 const multer = require('multer');
 
 const diskStorage = multer.diskStorage({
@@ -47,6 +49,8 @@ router.use('/comment',commentRouter)
 router.use('/reaction',reactionRouter)
 // router.use('/web',webRouters)
 // router.use('/bo',boRouters)
-
+router.use("/quiz",quiz)
+router.use("/question",question)
+router.use("/response",response)
 
 module.exports = router;
