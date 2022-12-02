@@ -13,6 +13,10 @@ exports.createPost = catchAsync(async (req : Request, res : Response, next : Nex
     res.status(CREATED).json({status :"sent to Admin", result})
   });
 exports.getposts = catchAsync(async (req : Request, res : Response, next : NextFunction) => { 
-    const response = await Post.find()
+    const response = await Post.find({isPublished : true})
     res.status(OK).json({response})
+})
+exports.getpostsAdmin = catchAsync(async (req : Request, res : Response, next : NextFunction) => { 
+  const response = await Post.find({isPublished : false})
+  res.status(OK).json({response})
 })
