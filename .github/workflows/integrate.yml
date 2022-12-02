@@ -24,7 +24,7 @@ jobs:
           port: 22
           script: |
             cd ../home/SISbackend
-            git pull origin develop
+            git pull origin main
             git status
             docker build . -t dockerized-node
             docker stop $(docker ps -q --filter ancestor=dockerized-node )           
