@@ -11,7 +11,7 @@ const routes = require('../routes');
 
 
 const app = express();
-app.use('/images',express.static(path.join('images')))
+app.use('/images',express.static(path.join('src/images')))
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(morgan("dev"));
 app.use(bodyParser.json({ limit: '5mb' }));
