@@ -23,7 +23,7 @@ jobs:
           password: Rakbhim192527@
           port: 22
           script: |
-            cd ../home/SISbackend
+            cd ../home/SISbackend 
             git pull origin main
             git status
             docker build . -t dockerized-node
