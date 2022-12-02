@@ -6,5 +6,6 @@ const response=require("../controllers/response.controller")
 const router = express.Router();
 const midleware=require("../midleware/midleware")
 router.post('/addResponse',response.createResponse)
-router.get('/response/question/:id',midleware.auth,response.getResponseByQuestion)
+router.get('/response/question/:id',response.getResponseByQuestion)
+//midleware.auth,
 module.exports = router;
