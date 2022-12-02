@@ -26,6 +26,6 @@ jobs:
             cd ../home/SISbackend 
             git pull origin main
             git status
-            docker build . -t dockerized-node
             docker stop $(docker ps -q --filter ancestor=dockerized-node )           
+            docker build . -t dockerized-node
             docker run -p 3010:3010 -d dockerized-node
